@@ -21,5 +21,22 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+"use strict";
 
+const numberOfFilms = promt("Сколько фильмов вы уже посмотрели?", "");
+const personalMovieDB = {
+  count: numberOfFilms,
+  movies: {},
+  actors: {},
+  genres: [],
+  privat: false,
+};
+const lastFilm = promt("Один из последних просмотренных фильмов?", "");
+const lastFilmRating = promt("На сколько оцените его?", "");
+const lastFilm2 = promt("Один из последних просмотренных фильмов?", "");
+const lastFilmRating2 = promt("На сколько оцените его?", "");
+
+personalMovieDB.movies[lastFilm] = lastFilmRating;
+personalMovieDB.movies[lastFilm2] = lastFilmRating2;
+
+console.log(personalMovieDB);
